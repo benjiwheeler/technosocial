@@ -37,33 +37,34 @@ p {
 }
 @font-face{
     font-family: "Cocogoose";
-    src: font-url('Cocogoose.otf');
+    src: url('fonts/Cocogoose.otf');
 }
 
 @font-face{
     font-family: "DigitalDisorder";
-    src: font-url('DigitalDisorder.ttf');
+    src: url('fonts/DigitalDisorder.otf');
+    src: url('fonts/DigitalDisorder.otf');
 }
 
 @font-face{
     font-family: "go around the books";
-    src: font-url('go%20around%20the%20books.ttf');
+    src: url('fonts/go%20around%20the%20books.ttf');
 }
 
 @font-face{
     font-family: "BebasNeue";
-    src: font-url('BebasNeue.otf');
+    src: font-url('fonts/BebasNeue.otf');
 }
 
 
 @font-face{
     font-family: "BenHandwriting";
-    src: font-url('BenHandwriting.ttf');
+    src: font-url('fonts/BenHandwriting.ttf');
 }
 
 @font-face{
     font-family: "Symbola";
-    src: font-url('Symbola.ttf');
+    src: font-url('fonts/Symbola.ttf');
 }
 
 
@@ -287,16 +288,16 @@ font-size: 10em;
 
 @include respond-to(medium-screens) {
   body {
-    zoom: 1.25;
-    -moz-transform: scale(1.25);
+    zoom: 1.0;
+    -moz-transform: scale(1.0);
     -moz-transform-origin: 50% 0;
   }
 }
 @include respond-to(wide-screens) {
   body {
-    zoom: 1.2;
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
+    zoom: 1.0;
+    -webkit-transform: scale(1.0);
+    -moz-transform: scale(1.0);
     -moz-transform-origin: 50% 0;
   }
 }
