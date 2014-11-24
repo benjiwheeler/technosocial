@@ -4,8 +4,8 @@
 
 $break-small: 400px;
 $break-large: 1024px;
-$yellow: "#fc0";
-$purple: "#6px";
+$yellow: #fc0;
+$purple: #93d;
 
 @mixin respond-to($media) {
   @if $media == handhelds {
@@ -25,6 +25,7 @@ body {
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
 //    font-family: "Lato";
+top: 0;
   font-size: 13px;
   line-height: 125%;
     text-align: center;
@@ -37,34 +38,34 @@ p {
 }
 @font-face{
     font-family: "Cocogoose";
-    src: url('fonts/Cocogoose.otf');
+    src: asset-url('fonts/Cocogoose.otf');
 }
 
 @font-face{
     font-family: "DigitalDisorder";
-    src: url('fonts/DigitalDisorder.otf');
-    src: url('fonts/DigitalDisorder.otf');
+    src: asset-url('fonts/DigitalDisorder.otf');
+    src: asset-url('fonts/DigitalDisorder.otf');
 }
 
 @font-face{
     font-family: "go around the books";
-    src: url('fonts/go%20around%20the%20books.ttf');
+    src: asset-url('fonts/goaroundthebooks.ttf');
 }
 
 @font-face{
     font-family: "BebasNeue";
-    src: font-url('fonts/BebasNeue.otf');
+    src: asset-url('fonts/BebasNeue.otf');
 }
 
 
 @font-face{
     font-family: "BenHandwriting";
-    src: font-url('fonts/BenHandwriting.ttf');
+    src: asset-url('fonts/BenHandwriting.ttf');
 }
 
 @font-face{
     font-family: "Symbola";
-    src: font-url('fonts/Symbola.ttf');
+    src: asset-url('fonts/Symbola.ttf');
 }
 
 
@@ -101,7 +102,7 @@ h1.social_left {
 h1.techno_right {
     font-family: "DigitalDisorder", Cocogoose, Verdana, Helvetica, sans-serif;
   color: #ccc;
-      left: $purple;
+      left: 5px;
 
 }
 
@@ -111,7 +112,7 @@ h1.social_right {
     //font-size: 6em;
 /*  color: #b6f; // light purple */
 /* // more purple */
-  color: #93d;
+  color: $purple;
 
 }
 
@@ -157,6 +158,7 @@ h1.social_right {
 
 #beforeafter {
  min-height: 100vh;
+ height: 100%;
   width: 100vw;
 }
 
