@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: technosocial_production
-  username: technosocial
+  #username: technosocial
   password: <%= ENV['TECHNOSOCIAL_DATABASE_PASSWORD'] %>
