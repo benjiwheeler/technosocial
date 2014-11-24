@@ -42,6 +42,11 @@ p {
 }
 
 @font-face{
+    font-family: "OstrichItalic";
+    src: asset-url('fonts/Ostrich Sans Inline-italic.otf');
+}
+
+@font-face{
     font-family: "DigitalDisorder";
     src: asset-url('fonts/DigitalDisorder.otf');
     src: asset-url('fonts/DigitalDisorder.otf');
@@ -131,16 +136,17 @@ h1.social_right {
       display: inline-block;
 
   position: relative;
-    font-family: "BebasNeue", "Cocogoose", Cocogoose, Verdana, Helvetica, sans-serif;
     border-radius: 5px;
 
 }
 
 .parallelogram_text {
+      font-family: "OstrichItalic", "BebasNeue", "Cocogoose", Cocogoose, Verdana, Helvetica, sans-serif;
+
     transform: none;
-    -webkit-transform: skew(20deg);
-    -moz-transform: skew(20deg);
-    transform: skew(20deg);
+    -webkit-transform: skew(30deg);
+    -moz-transform: skew(30deg);
+    transform: skew(30deg);
     font-size: 1.5em;
       font-weight: 200;
 
@@ -198,7 +204,7 @@ background-color: black;
   width: 250px;
   height: 250px;
   position: relative;
-  margin: 15px auto;
+  margin: 0 auto;
   margin-bottom: 15px;
   left: 5px;
 }
@@ -267,19 +273,29 @@ background-color: black;
   height: 56px;
 }
 
-#central_container {
-
-  width: 320px;
-//    padding: 10px 10px;
+#central_outer_container {
+//overflow: hidden;
+ // width: 800px;
+ /*
     height: auto;
   display: block;
     position:relative;
-  background-color: #169;
+  margin: 0;
+*/
+}
+
+.central_inner_container {
+/*
+overflow: hidden;
+  width: 800px;
+    padding: 15px 10px 0px;
+    height: auto;
+  display: block;
+    position:relative;
+//  background-color: #169;
   margin: 0 auto;
-//  margin-top: 40px;
-//  margin-bottom: 40px;
-//  margin-left: auto;
-//  margin-right: auto;
+  //top: 30px;
+*/
 }
 
 .emoji_large {
