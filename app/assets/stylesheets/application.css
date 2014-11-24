@@ -12,7 +12,8 @@
  *
  *= require_tree .
  *= require_self
- *= require jquery.ui.all
+ *= require jquery-ui
+ *= require jquery.mobile
  */
 
 $break-small: 400px;
@@ -54,7 +55,7 @@ p {
 
 @font-face{
     font-family: "DigitalDisorder";
-    src: url('../fonts//DigitalDisorder.ttf?raw=1');
+    src: url('DigitalDisorder.ttf');
 }
 
 @font-face{
@@ -64,7 +65,7 @@ p {
 
 @font-face{
     font-family: "BebasNeue";
-    src: url('../fonts/BebasNeue.otf');
+    src: url('BebasNeue.otf');
 }
 
 
@@ -75,7 +76,7 @@ p {
 
 @font-face{
     font-family: "Symbola";
-    src: url('Symbola.ttf&raw=1');
+    src: url('Symbola.ttf');
 }
 
 
