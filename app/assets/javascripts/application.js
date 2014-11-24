@@ -18,11 +18,6 @@
 //= require_tree .
 
 
-$(document).ready(function(){
-  $('#beforeafter').beforeAfter();
-
-  });
-
 
 /*
 // direct event
