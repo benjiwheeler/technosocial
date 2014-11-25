@@ -198,8 +198,9 @@ background-color: black;
   width: 250px;
   height: 250px;
   position: relative;
-  margin: 15px auto;
-  margin-bottom: 15px;
+  margin: 0px auto;
+  top: 15px;
+  margin-bottom: 5px;
   left: 5px;
 }
 
@@ -267,10 +268,16 @@ background-color: black;
   height: 56px;
 }
 
+#central_outer_container {
+    position:relative;
+margin: 0;
+text-align: center;
+}
+
 #central_container {
 
  // width: 320px;
-//    padding: 10px 10px;
+    //padding: 10px 0px;
     height: auto;
   display: block;
     position:relative;
@@ -287,6 +294,229 @@ background-color: black;
 font-size: 10em;
 
 }
+
+.main_list {
+  //background-color: red;
+//  position: relative;
+  margin: 5px auto;
+  width: 700px;
+}
+
+#social_list {
+  @extend .main_list;
+}
+
+#techno_list {
+  @extend .main_list;
+}
+
+.main_item {
+//  background-color: gray;
+margin: 45px 0;
+width: 100%;
+position: relative;
+display: block;
+clear: both;
+height: 160px;
+}
+
+.social_item {
+@extend .main_item;
+}
+.techno_item {
+@extend .main_item;
+color: #fff;
+}
+
+.social_item_icon {
+//  background-color: white;
+      font-family: "Symbola", "Cocogoose", Helvetica, sans-serif;
+font-size: 10em;
+padding: 10px;
+position: relative;
+float: right;
+  width: 120px;
+//  top: -40px;
+    line-height: 80%;
+
+}
+
+.social_item_text {
+  //background-color: green;
+  font-size: 0.85em;
+//float: left;
+      font-family: "go around the books", "Cocogoose", Helvetica, sans-serif;
+text-align: right;
+    line-height: 150%;
+
+}
+
+.social_item_headline {
+//  background-color: blue;
+font-size: 2em;
+      font-family: "go around the books", "Cocogoose", Helvetica, sans-serif;
+display: block;
+text-align: right;
+margin: 0 auto 10px;
+}
+
+.social_item_content {
+//  background-color: yellow;
+  display: block;
+
+}
+
+.techno_item_icon {
+//  background-color: white;
+      font-family: "Symbola", "Cocogoose", Helvetica, sans-serif;
+font-size: 10em;
+padding: 2px;
+position: relative;
+float: left;
+  width: 234px;
+//  top: -40px;
+    line-height: 80%;
+
+}
+
+.techno_item_text {
+  //background-color: green;
+  font-size: 0.85em;
+  display: block;
+  left: 0;
+  float: left;
+clear: both;
+  position: relative;
+      font-family: "Cocogoose", Helvetica, sans-serif;
+text-align: left;
+    line-height: 150%;
+}
+
+.techno_item_subtitle {
+ display: block;
+  //clear: both;
+//  display: inline-block;
+      font-family: "Cocogoose", Helvetica, sans-serif;
+  font-style: italic;
+  text-align: left;
+    line-height: 110%;
+    margin-bottom: 10px;
+    left: 0;
+    float: left;
+ //   white-space: nowrap;
+}
+
+.techno_item_headline {
+//  background-color: blue;
+ // display: inline-block;
+    line-height: 100%;
+//height: 100px;
+font-size: 2em;
+      font-family: "Cocogoose", Helvetica, sans-serif;
+//display: block;
+text-align: left;
+left: 0;
+float: left;
+margin-left: 0;
+margin-right: auto;
+margin-bottom: 10px;
+}
+
+.techno_item_content {
+//  background-color: yellow;
+  //display: block;
+float: right;
+width: 460px;
+}
+
+.mockup_outer_container {
+  position: relative;
+text-align: center;
+  width: 230px;
+    border-bottom:1px solid green;
+  height: 150px;
+
+}
+
+.mockup_inner_container {
+  margin: 0 auto;
+  position: relative;
+  width: 200px;
+  height: 150px;
+
+}
+
+.mockup_background {
+background-image: url("https://dl.dropboxusercontent.com/u/1035381/images/iphone6_wireframe_purple.png");
+      background-repeat: no-repeat;
+//  display: visible;
+  position: absolute;
+  height: 150px;
+    width: 200px;
+
+background-size: 200px;
+  z-index: 1;
+}
+
+.screenshot {
+  z-index: 2;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  bottom: 0;
+  top: -50px;
+  text-align: center;
+  width: 174px;
+    height: 222px;
+background-size: cover;
+  -webkit-clip-path: polygon(
+    0 45%, 100% 45%, 100% 90%, 0 90%, 0 45%
+  );
+
+}
+
+#dayo_screenshot {
+  background-image: url("https://dl.dropboxusercontent.com/u/1035381/images/dayo_screenshot.jpeg");
+}
+
+#underground_screenshot {
+  background-image: url("https://dl.dropboxusercontent.com/u/1035381/images/underground_screenshot.jpeg");
+}
+
+#ehighlighter_screenshot {
+  background-image: url("https://dl.dropboxusercontent.com/u/1035381/images/ehighlighter_screenshot.jpeg");
+}
+
+.app_store_button {
+  height: 26px;
+//  display: inline;
+float: left;
+text-align: left;
+left: 0;
+margin-top: 5px;
+margin-left: 15px;
+margin-bottom: 18px;
+}
+
+
+/* round rect thing */
+#wrapper {
+    width: 300px; height: 300px;
+    border-radius: 100px;
+    overflow: hidden;
+    position: absolute; /* this breaks the overflow:hidden in Chrome/Opera */
+    -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC); /* this fixes the overflow:hidden in Chrome/Opera */
+}
+
+#box {
+    width: 300px; height: 300px;
+    background-color: #cde;
+}
+
+
+
+
+
 
 @include respond-to(medium-screens) {
   body {

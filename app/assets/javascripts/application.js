@@ -15,6 +15,7 @@
 //= require jquery_ujs
 //= require jquery.mobile
 //= require turbolinks
+//= require jquery.beforeafter
 //= require_tree .
 
 
@@ -39,21 +40,16 @@ $('body').on('tap', '.touchme', function() {
     e.preventDefault();
 });
 
-
-
-$('body').on('flick', function(e) {
-    if ('horizontal' == e.orientation) {
-        if (1 == e.direction) {
-      console.log("onflick: left ");
+  $(document).on( "swiperight", function(e) {
 //          alert("openLeft called for flick");
           openLeft();
-        }
-        else {
+});
+
+  $(document).on( "swipeleft", function(e) {
       console.log("onflick: right ");
           openRight();
-        }
-    }
 });
+
 
 
 

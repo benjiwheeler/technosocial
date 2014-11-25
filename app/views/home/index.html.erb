@@ -1,5 +1,5 @@
-  <div id="central_container">
-  <div id="beforeafter">b
+  <div id="central_outer_container">
+  <div id="beforeafter">
   <div id="mainleft" class="before">
       <div id="headshot_circle_before" class="headshot_circle">
       <%= image_tag("pixel_selfie.png", id: :headshot_techno, class: :headshot_img) %>
@@ -10,21 +10,61 @@
 
     <div class="parallelogram_left parallelogram"><p class="parallelogram_text">Ben Wheeler sorta effects some stuff</p></div>
 
+    <ul id="techno_list">
 
-    <p>Yo
+    <li class="techno_item">
+        <div class="techno_item_icon">
+          <div class="mockup_outer_container">
+            <div class="mockup_inner_container">
+              <div class="mockup_background"></div>
+              <div id="dayo_screenshot" class="screenshot"></div>
+            </div>
+          </div>
+        </div>
+        <div class="techno_item_content">
+          <p class="techno_item_headline">Dayo</p>
+          <%= image_tag("app_store_button.png", class: :app_store_button) %>
+          <p class="techno_item_subtitle">Daily weather on your lockscreen</p>
+          <p class="techno_item_text">Tells you the weather like a human does, by the time you wake up.<br />Tech I used: obj-c, js, Parse service</p>
+        </div>
+    </li>
+
+    <li class="techno_item">
+        <div class="techno_item_icon">
+          <div class="mockup_outer_container">
+            <div class="mockup_inner_container">
+              <div class="mockup_background"></div>
+              <div id="underground_screenshot" class="screenshot"></div>
+            </div>
+          </div>
+      </div>
+      <div class="techno_item_content">
+          <p class="techno_item_headline">Underground</p>
+                    <%= image_tag("app_store_button.png", class: :app_store_button) %>
+<p class="techno_item_subtitle">Share thoughts with people like you</p>
+          <p class="techno_item_text">We failed at this before Facebook Rooms did!<br />Tech I used: obj-c, rails</p>
+      </div>
+    </li>
+
+    <li class="techno_item">
+        <div class="techno_item_icon">
+          <div class="mockup_outer_container">
+            <div class="mockup_inner_container">
+              <div class="mockup_background"></div>
+              <div id="ehighlighter_screenshot" class="screenshot"></div>
+            </div>
+          </div>
+      </div>
+      <div class="techno_item_content">
+          <p class="techno_item_headline">eHighlighter</p>
+                    <%= image_tag("app_store_button.png", class: :app_store_button) %>
+<p class="techno_item_subtitle">eBook-style highlighting for real-world books</p>
+          <p class="techno_item_text">A few thousand paying users love it!<br />Tech I used: obj-c</p>
+      </div>
+    </li>
+    </ul>
 
 
-    <p>.</p>
-    <p>.</p>
-
-    <p>
-    <p>
-    <p>
-    <p>
-    <p>
-    <p>
-    <p>
-d
     </div> <!-- mainleft -->
   <div id="mainright" class="after">
   <div id="headshot_circle_after" class="headshot_circle">
@@ -36,6 +76,13 @@ d
     <h1 class="social_right">Social</h1>
 
     <div class="parallelogram_right parallelogram"><p class="parallelogram_text">Ben Wheeler sorta affects some stuff</p></div>
+
+    <ul id="social_list">
+    <li class="main_item"><div class="social_item_icon">&#x1f64b</div><div class="social_item_content"><p class="social_item_headline">Teaching</p><p class="social_item_text">I’ve taught everything from middle school math to college literature, in the US and abroad. I recently started teaching Ruby on Rails through Railsbridge. Ask me about teaching The Great Gatsby to appalled Turkish students.</p></div></li>
+    <li class="main_item"><div class="social_item_icon">&#x1F6A2</div><div class="social_item_content"><p class="social_item_headline">Foreign Affairs</p><p class="social_item_text">I was a consultant for the Presidential Administration of Georgia (the one near Russia) to improve their procedures for hosting dignitaries and academics and organizing international conferences.</p></div></li>
+    <li class="main_item"><div class="social_item_icon">&#x1F49B</div><div class="social_item_content"><p class="social_item_headline">Activism</p><p class="social_item_text">I shared lessons from American student activism with student groups in former Soviet Georgia, and worked with opposition politicians; both groups went on to lead Georgia’s peaceful 2003 revolution. I’ve volunteered for four political campaigns in New York including the original drive to get the Working Families Party on the ballot and Ken Thompson’s DA campaign (both surprise wins).</p></div></li>
+    <li class="main_item"><div class="social_item_icon">&#x1F4DD</div><div class="social_item_content"><p class="social_item_headline">Teaching</p><p class="social_item_text">I’ve written for MAKE Magazine (eg: circuits for kids), Columbia Political Review, and on a blog I share with my sometime editor Alice. I’m interested in how we come to believe what we believe (eg: trying to write from the perspective of those I disagree with), and how we can realize when we’re wrong (eg: on circumcision).</p></div></li>
+    </ul>
 
     <p>.</p>
     <p>.</p>
