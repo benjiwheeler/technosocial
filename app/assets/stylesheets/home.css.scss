@@ -259,7 +259,7 @@ h1.social_right {
   position    : relative;
   float       : right;
 
-  width       : .75em;
+  width       : 8.75em;
   padding     : .06em;
 
   font-family : "Symbola", "Cocogoose", Helvetica, sans-serif;
@@ -285,6 +285,7 @@ h1.social_right {
 }
 
 .social_item_content {
+  float : left;
   display : block;
 }
 
@@ -294,9 +295,6 @@ h1.social_right {
 
   width       : 14.6em;
   padding     : .15em;
-
-  font-family : "Symbola", "Cocogoose", Helvetica, sans-serif;
-  line-height : 80%;
 }
 
 .techno_item_text {
