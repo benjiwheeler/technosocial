@@ -167,19 +167,18 @@ h1.social_right {
 
 .headshot_img {
   position : relative;
+  height : 13em;
 }
 
 #headshot_techno {
   top    : 1.5em;
   left   : .8em;
-
   height : 13em;
 }
 
 #headshot_social {
   top    : 1.8em;
   left   : .5em;
-
   height : 13em;
 }
 
@@ -292,6 +291,7 @@ h1.social_right {
   @extend .item_content;
   float : left;
   width: 34em;
+  display : block;
 }
 
 .techno_item_icon {
@@ -448,7 +448,19 @@ h1 {
    font-size: 3.5em;
 }
 .headshot_circle {
-		font-size: .8rem;
+font-size: .8rem;
+}
+.techno_item_icon, .social_item_icon {
+  float: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.techno_item_content, .social_item_content {
+  float: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;  
 }
 .main_list {
 	   width: 85vw;
