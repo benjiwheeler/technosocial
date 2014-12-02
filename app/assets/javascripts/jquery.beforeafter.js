@@ -63,6 +63,7 @@ var openRight;
       var arrowWidth = parseFloat(getStyleRuleValue('width', '.drag_arrow'));
       var arrowBufferWidth = 10;
 
+
       return this.each(function() {
 	var o=options;
 	var obj = $(this);
@@ -72,6 +73,11 @@ var openRight;
 
 	var divWidth = befDiv.width();
 	var divWidthNum = parseFloat(divWidth);
+
+      var minShowingPortion = .8;
+      var minHiddenPx = 10;
+      var leftOpenWidth = (divWidthNum + divWidthNum * minShowingPortion - minHiddenPx) / 2.0;
+      var leftClosedWidth = (divWidthNum * (1 - minShowingPortion) + minHiddenPx) / 2.0;
 
 	var divHeight = befDiv.height();
 	if (aftDiv.height() > divHeight) {
@@ -124,12 +130,10 @@ var openRight;
 
 
 	openLeft = function(){
-	  var leftOpenWidth = getStyleRuleValue('left', '.leftOpen'); // divWidth-$('#dragwrapper'+randID).width()+'px'
 	  befContainerDiv.animate({width:leftOpenWidth},o.linkDisplaySpeed);
 	  $('#dragwrapper'+randID).animate({left: leftOpenWidth},o.linkDisplaySpeed);
 	};
 	openRight = function(){
-	  var leftClosedWidth = getStyleRuleValue('left', '.leftClosed');
 	  befContainerDiv.animate({width:leftClosedWidth},o.linkDisplaySpeed);
 	  $('#dragwrapper'+randID).animate({left: leftClosedWidth},o.linkDisplaySpeed);
 	};
@@ -148,7 +152,7 @@ var openRight;
 	  $(document).keydown(function(event){
 	    if(event.keyCode == 39)
 	    {
-	      if( (parseFloat($('#dragwrapper'+randID).css('left'))+parseFloat($('#dragwrapper'+randID).width()) + o.keypressAmount) <= divWidthNum )
+	      if( (parseFloat($('#dragwrapper'+randID).css('left')) + o.keypressAmount) <= leftOpenWidth )
 	      {
 		$('#dragwrapper'+randID).css('left', parseFloat( $('#dragwrapper'+randID).css('left') ) + o.keypressAmount + 'px');
 		befContainerDiv.width( parseFloat( befContainerDiv.width() ) + o.keypressAmount + 'px' );
@@ -156,14 +160,14 @@ var openRight;
 	      }
 	      else
 	      {
-		$('#dragwrapper'+randID).css('left', divWidthNum - parseFloat( $('#dragwrapper'+randID).width() ) + 'px');
-		befContainerDiv.width( divWidthNum - parseFloat( $('#dragwrapper'+randID).width() )/2 + 'px' );
+		$('#dragwrapper'+randID).css('left', leftOpenWidth + 'px');
+		befContainerDiv.width( leftOpenWidth + 'px' );
 		//updateDivWidth();
 	      }
 	    }
 	    if(event.keyCode == 37)
 	    {
-	      if( (parseFloat($('#dragwrapper'+randID).css('left')) - o.keypressAmount) >= 0 )
+	      if( (parseFloat($('#dragwrapper'+randID).css('left')) - o.keypressAmount) >= leftClosedWidth )
 	      {
 		$('#dragwrapper'+randID).css('left', parseFloat( $('#dragwrapper'+randID).css('left') ) - o.keypressAmount + 'px');
 		befContainerDiv.width( parseFloat( befContainerDiv.width() ) - o.keypressAmount + 'px' );
@@ -171,8 +175,8 @@ var openRight;
 	      }
 	      else
 	      {
-		$('#dragwrapper'+randID).css('left', '0px');
-		befContainerDiv.width($('#dragwrapper'+randID).width()/2);
+		$('#dragwrapper'+randID).css('left', leftClosedWidth + 'px');
+		befContainerDiv.width(leftClosedWidth + 'px');
 		//updateDivWidth();
 	      }
 	    }
@@ -185,7 +189,9 @@ var openRight;
 	{
 	  $('#lt-arrow'+randID+', #rt-arrow'+randID).stop().css('opacity',0);
 	  //			  alert("this left: " + $(this).css('left') + "; half width is " + parseFloat(dragWrapperHalfWidth)  );
-	  befContainerDiv.width( parseFloat($(this).css('left')) + parseFloat(dragWrapperHalfWidth)  + 'px' );
+	  var newWidth = parseFloat($(this).css('left')) + parseFloat(dragWrapperHalfWidth);
+	  befContainerDiv.width( newWidth  + 'px' );
+//	  alert(newWidth);
 	  //updateDivWidth();
 
 	  // borrowed from the animate hover thing below

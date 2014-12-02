@@ -291,7 +291,13 @@ h1.social_right {
   text-align  : right;
 }
 
+.item_content {
+  padding-bottom: 2em;
+
+}
+
 .social_item_content {
+  @extend .item_content;
   float : left;
   width: 34em;
 }
@@ -350,6 +356,7 @@ h1.social_right {
 }
 
 .techno_item_content {
+  @extend .item_content;
   float : right;
   width : 28.75em;
 }
@@ -483,7 +490,6 @@ left: -5vw;
 
 .social_item_content, .techno_item_content {
 		   text-align: center;
-		      padding-bottom: 1rem;
 		   margin-left: auto;
 		   margin-right: auto;
 		   padding-left: 0;
