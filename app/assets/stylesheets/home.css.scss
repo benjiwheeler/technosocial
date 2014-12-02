@@ -36,6 +36,13 @@ body {
   text-align       : center;
 }
 
+.noselect {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -user-select: none;
+}
+
 
 h1 {
   position    : relative;
@@ -71,10 +78,10 @@ h1.techno_right {
 
 h1.social_right {
   left        : .2em;
+  z-index: 2;
 
   font-family : "go around the books", Cocogoose, Verdana, Helvetica, sans-serif;
   color       : $purple;
-  z-index: 2;
 }
 
 .parallelogram {
@@ -166,22 +173,22 @@ h1.social_right {
   top    : 1.5em;
   left   : .8em;
 
-  height : 14em;
+  height : 13em;
 }
 
 #headshot_social {
   top    : 1.8em;
   left   : .5em;
 
-  height : 14em;
+  height : 13em;
 }
 
 .leftOpen {
-  left : 85vw;
+  left : 90vw;
 }
 
 .leftClosed {
-  left : 15vw;
+  left : 10vw;
 }
 
 .drag_wrapper {
@@ -243,7 +250,7 @@ h1.social_right {
 
   height   : 10em;
   width    : 100%;
-  margin   : 3em 0;
+  margin   : 2em 0 2em;
 }
 
 .social_item {
@@ -260,7 +267,7 @@ h1.social_right {
   float       : right;
 
   width       : .75em;
-  padding     : .06em;
+  padding     : .025em .015em .03em;
 
   font-family : "Symbola", "Cocogoose", Helvetica, sans-serif;
   font-size   : 10em;
@@ -285,7 +292,8 @@ h1.social_right {
 }
 
 .social_item_content {
-  display : block;
+  float : left;
+  width: 34em;
 }
 
 .techno_item_icon {
@@ -293,7 +301,8 @@ h1.social_right {
   float       : left;
 
   width       : 14.6em;
-  padding     : .15em;
+  padding     : .25em .15em 2em;
+
 
   font-family : "Symbola", "Cocogoose", Helvetica, sans-serif;
   line-height : 80%;
@@ -353,6 +362,7 @@ h1.social_right {
 
   text-align    : center;
   border-bottom : .1em solid green;
+  z-index                      : 1;
 }
 
 .mockup_inner_container {
@@ -365,7 +375,7 @@ h1.social_right {
 
 .mockup_background {
   position                     : absolute;
-  z-index                      : 1;
+  z-index                      : 0;
 
   height                       : 9.375em;
   width                        : 12.5em;
@@ -379,7 +389,7 @@ h1.social_right {
 .screenshot {
   position          : relative;
   display           : block;
-  top               : -3.125em;
+  top               : -0.34em;
   bottom            : 0;
   z-index           : 2;
 
@@ -391,7 +401,7 @@ h1.social_right {
   text-align        : center;
 
   -webkit-clip-path : polygon(
-  0 45%, 100% 45%, 100% 90%, 0 90%, 0 45%
+  0 25%, 100% 25%, 100% 70%, 0 70%, 0 25%
   );
 }
 
@@ -412,27 +422,9 @@ h1.social_right {
   left          : 0;
 
   height        : 1.6em;
-  margin-top    : .3em;
-  margin-bottom : 1.1em;
-  margin-left   : 1em;
+  padding: .2em 1em 0em 1em;
 
   text-align    : left;
-}
-
-/* round rect thing */
-#wrapper {
-  overflow             : hidden;
-
-  border-radius        : 100px;
-
-  width: 300px; height : 300px;
-    position: absolute; /* this breaks the overflow:hidden in Chrome/Opera */
-    -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC); /* this fixes the overflow:hidden in Chrome/Opera */
-}
-
-#box {
-  background-color     : #cde;
-  width: 300px; height : 300px;
 }
 
 .graph {
@@ -442,21 +434,67 @@ min-width: 310px; max-width: 350px; height: 30px; margin: 0 auto
 @include respond-to(handhelds) {
   body {
     min-width : 320px; // hack for mobile safari
+    // need these or zindex fonts fail sometimes!
+    -webkit-transform     : scale(1.0);
+    -moz-transform        : scale(1.0);
+    -moz-transform-origin : 50% 0;
+
+    zoom                  : 1.0;
     font-size: 13px;
 }
 html {
     font-size: 13px;
   }
 h1 {
-   font-size: 3em;
+   font-size: 3.5em;
 }
 .headshot_circle {
 		font-size: .8rem;
+}
+.main_list {
+	   width: 85vw;
+	   font-size: .8em;	
+}
+#social_list {
+position: relative;
+left: 5vw;
+}
+#techno_list {
+position: relative;
+left: -5vw;
+}
+.main_item {
+	   width: 80vw;
+}
+.social_item_icon, .techno_item_icon, .social_item_headline, .techno_item_headline, .app_store_button, .social_item_subtitle, .techno_item_subtitle, .social_item_text, .techno_item_text {
+		   text-align: center;
+		   float: none;
+		   display: block;
+		   position: relative;
+		   padding: 0;
+		   margin-top: .3rem;
+		   margin-left: auto;
+		   margin-right: auto;
+		   margin-bottom: .5rem;
+}
+.app_store_button {
+  height        : 1.6em;
+}
+
+.social_item_content, .techno_item_content {
+		   text-align: center;
+		      padding-bottom: 1rem;
+		   margin-left: auto;
+		   margin-right: auto;
+		   padding-left: 0;
+		   padding-right: 0;
+  width : 80vw;
 }
 }
 
 @include respond-to(medium-screens) {
   body {
+    -webkit-transform     : scale(1.0);
     -moz-transform        : scale(1.0);
     -moz-transform-origin : 50% 0;
 
@@ -468,7 +506,7 @@ html {
     font-size: 13px;
   }
 h1 {
-   font-size: 4em;
+   font-size: 6em;
 }
 .headshot_circle {
 		font-size: 1em;

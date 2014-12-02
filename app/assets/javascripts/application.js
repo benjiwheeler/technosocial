@@ -15,6 +15,7 @@
 //= require jquery_ujs
 //= require jquery.mobile
 //= require turbolinks
+//= require jquery.csshelper
 //= require jquery.beforeafter
 //= require_tree .
 
@@ -40,37 +41,44 @@ $('body').on('tap', '.touchme', function() {
     e.preventDefault();
 });
 
+var clearSelection = function() {
+    if (window.getSelection) {
+      if (window.getSelection().empty) { // chrome 
+	window.getSelection().empty();
+	//alert("emptying");
+      } else if (window.getSelection().removeAllRanges) { // mozilla
+	window.getSelection().removeAllRanges();
+      } else if (document.selection) { // ie
+	document.selection.empty();
+      }
+    }
+};
+
   $(document).on( "swiperight", function(e) {
 //          alert("openLeft called for flick");
+//e.preventDefault();
           openLeft();
+//return false;
+//    clearSelection();
+//    $("body").addClass(".noselect");
 });
+
 
   $(document).on( "swipeleft", function(e) {
       console.log("onflick: right ");
+//e.preventDefault();
           openRight();
+//    clearSelection();
+  //  $("body").addClass(".noselect");
 });
 
 
 
 
-function getStyleRuleValue(style, selector, sheetparam) {
-    var sheets = typeof sheetparam !== 'undefined' ? [sheetparam] : document.styleSheets;
-    for (var i = 0, l = sheets.length; i < l; i++) {
-        var sheet = sheets[i];
-        if( !sheet.cssRules ) { continue; }
-        for (var j = 0, k = sheet.cssRules.length; j < k; j++) {
-            var rule = sheet.cssRules[j];
-            if (rule.selectorText && rule.selectorText.split(',').indexOf(selector) !== -1) {
-                return rule.style[style];
-            }
-        }
-    }
-    return null;
-}
 
 
 
-
+/*
 $(function () {
         Highcharts.getOptions().plotOptions.bar.colors = (function () {
         var colors = [],
@@ -159,7 +167,7 @@ $(function () {
         }]
     });
 });
-
+*/
 
 
 
