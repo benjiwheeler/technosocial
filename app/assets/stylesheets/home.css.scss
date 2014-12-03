@@ -129,7 +129,7 @@ h1.social_right {
 }
 
 #mainleft {
-  min-height       : 100vh;
+  min-height       : 100%;
   width            : 100vw;
 
   background-color : black;
@@ -137,8 +137,8 @@ h1.social_right {
 }
 
 #mainright {
-  min-height       : 100vh;
-  width            : 100vw;
+  min-height       : 100%;
+  width            : 100%;
 
   background-color : white;
   text-align       : center;
@@ -239,9 +239,9 @@ h1.social_right {
   display  : block;
   clear    : both;
 
-  height   : 10em;
+  min-height   : 12em;
   width    : 100%;
-  margin   : 2em 0 2em;
+  margin   : 2em 0 3em;
 }
 
 .social_item {
@@ -266,7 +266,7 @@ h1.social_right {
 }
 
 .social_item_text {
-  font-family : "go around the books", "Cocogoose", Helvetica, sans-serif;
+  font-family : "BenHandwriting", "Cocogoose", Helvetica, sans-serif;
   font-size   : 0.85em;
   line-height : 150%;
   text-align  : right;
@@ -283,7 +283,7 @@ h1.social_right {
 }
 
 .item_content {
-  padding-bottom: 2em;
+//  padding-bottom: 2em;
 
 }
 
@@ -427,6 +427,8 @@ h1.social_right {
 }
 
 .graph {
+       visibility: hidden;
+display: none;
 min-width: 310px; max-width: 350px; height: 30px; margin: 0 auto
 }
 
@@ -460,11 +462,11 @@ font-size: .8rem;
   float: none;
   display: block;
   margin-left: auto;
-  margin-right: auto;  
+  margin-right: auto;
 }
 .main_list {
 	   width: 85vw;
-	   font-size: .8em;	
+	   font-size: .8em;
 }
 #social_list {
 position: relative;
@@ -477,9 +479,11 @@ left: -5vw;
 .main_item {
 	   width: 80vw;
 }
+.social_item_headline, .techno_item_headline, .app_store_button, .social_item_subtitle, .techno_item_subtitle, .social_item_text, .techno_item_text {
+  float: none;
+}
 .social_item_icon, .techno_item_icon, .social_item_headline, .techno_item_headline, .app_store_button, .social_item_subtitle, .techno_item_subtitle, .social_item_text, .techno_item_text {
 		   text-align: center;
-		   float: none;
 		   display: block;
 		   position: relative;
 		   padding: 0;
@@ -491,7 +495,11 @@ left: -5vw;
 .app_store_button {
   height        : 1.6em;
 }
-
+/* confusing to me that this is necessary; why doesn't it obey decent size of margin bottom it has already? */
+.social_item_icon {
+margin-bottom: 1rem;
+float: none;
+}
 .social_item_content, .techno_item_content {
 		   text-align: center;
 		   margin-left: auto;
