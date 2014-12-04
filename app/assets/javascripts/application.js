@@ -14,7 +14,6 @@
 //= require jquery-ui
 //= require jquery_ujs
 //= require jquery.mobile
-//= require jquery.finger
 //= require turbolinks
 //= require jquery.csshelper
 //= require jquery.beforeafter
