@@ -14,6 +14,7 @@
 //= require jquery-ui
 //= require jquery_ujs
 //= require jquery.mobile
+//= require jquery.finger
 //= require turbolinks
 //= require jquery.csshelper
 //= require jquery.beforeafter
@@ -43,7 +44,7 @@ $('body').on('tap', '.touchme', function() {
 
 var clearSelection = function() {
     if (window.getSelection) {
-      if (window.getSelection().empty) { // chrome 
+      if (window.getSelection().empty) { // chrome
 	window.getSelection().empty();
 	//alert("emptying");
       } else if (window.getSelection().removeAllRanges) { // mozilla
