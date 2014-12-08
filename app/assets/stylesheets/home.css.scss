@@ -52,7 +52,7 @@ h1 {
   line-height : 110%;
 }
 
-h1.techno_left {
+h1.techno_before {
   //left        : .2em;
 
   font-family : "DigitalDisorder", Cocogoose, Verdana, Helvetica, sans-serif;
@@ -60,7 +60,7 @@ h1.techno_left {
   z-index: 1;
 }
 
-h1.social_left {
+h1.social_before {
   //left        : .2em;
 
   font-family : "go around the books", Cocogoose, Verdana, Helvetica, sans-serif;
@@ -68,7 +68,7 @@ h1.social_left {
   z-index: 2;
 }
 
-h1.techno_right {
+h1.techno_after {
   //left        : .2em;
 
   font-family : "DigitalDisorder", Cocogoose, Verdana, Helvetica, sans-serif;
@@ -76,7 +76,7 @@ h1.techno_right {
   z-index: 1;
 }
 
-h1.social_right {
+h1.social_after {
   //left        : .2em;
   z-index: 2;
 
@@ -89,12 +89,12 @@ h1.social_right {
   /* only as wide as content */
   display           : inline-block;
 
-  height            : 3rem;
+  height            : 3em;
   margin            : auto;
-  padding           : .5rem 2rem 3rem;
+  padding           : .5em 2em 3em;
 
   font-family       : "BebasNeue", "Cocogoose", Cocogoose, Verdana, Helvetica, sans-serif;
-  border-radius     : .5rem;
+  border-radius     : .5em;
 
   -webkit-transform : skew(-30deg);
   -moz-transform    : skew(-30deg);
@@ -111,29 +111,29 @@ h1.social_right {
   transform         : skew(20deg);
 }
 
-.parallelogram_left {
+.parallelogram_before {
   background : #fff;
   color      : #000;
     font-family : "VivaPersib", "Cocogoose", Helvetica, sans-serif;
 
 }
 
-.parallelogram_right {
+.parallelogram_after {
   background : #000;
   color      : #fff;
 }
 
-.parallelogram_text_left {
+.parallelogram_text_before {
   @extend .parallelogram_text;
     position: relative;
     top: 2px;
 }
-.parallelogram_text_right {
+.parallelogram_text_after {
   @extend .parallelogram_text;
     font-family : "mathilde", "Cocogoose", Helvetica, sans-serif;
     font-size: 2.5em;
     position: relative;
-    top: -6px;
+
 }
 
 #beforeafter {
@@ -143,7 +143,7 @@ h1.social_right {
   min-width      : 100vw;
 }
 
-#mainleft {
+#mainbefore {
   min-height       : 100%;
   width            : 100vw;
 
@@ -151,7 +151,7 @@ h1.social_right {
   text-align       : center;
 }
 
-#mainright {
+#mainafter {
   min-height       : 100%;
   width            : 100%;
 
@@ -447,6 +447,61 @@ display: none;
 min-width: 310px; max-width: 350px; height: 30px; margin: 0 auto
 }
 
+
+#header-after, #header-before {
+margin: 0 auto;
+max-width: 70em;
+position: relative;
+}
+
+#contact-after, #contact-before {
+position: absolute;
+height: 6em;
+font-size: 1.5em;
+width: 12em;
+}
+#contact-after {
+right: 0;
+}
+#contact-before {
+left: 0;
+}
+
+.contact-after-item, .contact-before-item {
+position: relative;
+margin: 0.3em;
+}
+
+.contact-after-item {
+text-align: left;
+color: #000 !important;
+}
+.contact-before-item {
+text-align: right;
+color: #fff !important;
+}
+.contact-before-link, .contact-after-link {
+text-decoration: none;
+font-weight: 400 !important;
+}
+.contact-before-link {
+color: #fff !important;
+}
+.contact-after-link {
+color: #000 !important;
+}
+.contact-after-text, .contact-before-text {
+position: relative;
+top: .1em;
+line-height: 110%;
+}
+.contact-before-text {
+margin-right: .8em;
+}
+
+/* ************************** different sizes ***************************** */
+
+
 @include respond-to(handhelds) {
   body {
     min-width : 320px; // hack for mobile safari
@@ -464,8 +519,22 @@ html {
 h1 {
    font-size: 3.5em;
 }
+#contact-before, #contact-after {
+display: block;
+float: none;
+left: auto;
+right: auto;
+margin: 2em auto;
+top: 0;
+padding-top: 0;
+clear: both;
+position: relative;
+}
 .headshot_circle {
 font-size: .8rem;
+}
+.parallelogram {
+  font-size: .9rem;
 }
 .techno_item_icon, .social_item_icon {
   float: none;
