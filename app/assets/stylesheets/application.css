@@ -12,8 +12,8 @@
  *
  *= require reset.css
  *= require fonts.css
- *= require_tree .
- *= require_self
  *= require jquery-ui
  *= require jquery.mobile
+ *= require_tree .
+ *= require_self
  */
