@@ -22,6 +22,11 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'unicorn'
 gem 'newrelic_rpm'
 
+#gem 'bootstrap-sass', '~> 3.1.1'
+gem 'bootstrap-sass'
+#gem 'font-awesome-sass', '~> 4.2.0'
+gem 'font-awesome-sass'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'jquery_mobile_rails'
