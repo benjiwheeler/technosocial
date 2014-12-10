@@ -479,13 +479,23 @@ margin: 0.3em;
 }
 
 .contact-after-item {
-text-align: left;
+position: relative;
+top: .1em;
+text-align: right;
 color: #000 !important;
 }
 .contact-before-item {
-text-align: right;
+text-align: left;
 color: #fff !important;
 }
+.fa-valign-top {
+top: 0;
+right: .8em;
+
+position: absolute;
+background-color: blue;
+}
+
 .contact-before-link, .contact-after-link {
 text-decoration: none;
 font-weight: 400 !important;
@@ -502,7 +512,9 @@ top: .1em;
 line-height: 110%;
 }
 .contact-before-text {
-margin-right: .8em;
+}
+.contact-after-text {
+margin-right: 2.8em;
 }
 
 /* ************************** different sizes ***************************** */
