@@ -448,13 +448,19 @@ min-width: 310px; max-width: 350px; height: 30px; margin: 0 auto
 }
 
 
-#header-after, #header-before {
+#outer-header-after, #outer-header-before {
 margin: 0 auto;
 max-width: 70em;
 position: relative;
 }
+#inner-header-after, #inner-header-before {
+margin: 0 auto;
+max-width: 30em;
+position: relative;
+}
 
 #contact-after, #contact-before {
+top: 0;
 position: absolute;
 height: 6em;
 font-size: 1.5em;
