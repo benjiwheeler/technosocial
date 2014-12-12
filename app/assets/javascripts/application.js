@@ -17,6 +17,7 @@
 //= require turbolinks
 //= require jquery.csshelper
 //= require jquery.beforeafter
+//= require sprintf.min
 //= require_tree .
 
 
