@@ -25,5 +25,9 @@ module Technosocial
     # load custom modules
     config.autoload_paths += Dir["#{config.root}/lib/modules/"]
 
+    # add vendor fonts
+    config.assets.paths << "#{Rails.root}/vendor/assets/fonts"
+
+
   end
 end
