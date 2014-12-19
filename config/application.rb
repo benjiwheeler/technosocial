@@ -26,7 +26,8 @@ module Technosocial
     config.autoload_paths += Dir["#{config.root}/lib/modules/"]
 
     # add vendor fonts
-    config.assets.paths << "#{Rails.root}/vendor/assets/fonts"
+    config.assets.paths << "#{Rails.root}/vendor/assets/fonts/"
+    config.assets.paths << "#{Rails.root}/vendor/assets/fonts/fontawesome-mfizz/"
 
 
   end
