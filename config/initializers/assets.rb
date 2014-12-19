@@ -1,1 +1,1 @@
-Rails.application.config.assets.precompile += ['font-mfizz.css']
+#Rails.application.config.assets.precompile += ['font-mfizz.css']
