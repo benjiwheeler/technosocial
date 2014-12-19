@@ -28,6 +28,8 @@ module Technosocial
     # add vendor fonts
     config.assets.paths << "#{Rails.root}/vendor/assets/fonts/"
     config.assets.paths << "#{Rails.root}/vendor/assets/fonts/fontawesome-mfizz/"
+    config.assets.precompile << "#{Rails.root}/vendor/assets/stylesheets/fontawesome-mfizz/*.css"
+    config.assets.precompile += %w(*mfizz.css *.png *.jpg *.jpeg *.gif, *.ttf, *.eot, *.svg, *.woff)
 
 
   end
