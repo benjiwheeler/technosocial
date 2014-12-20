@@ -2,7 +2,7 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$break-small : 400px;
+$break-small : 700px;
 $break-large : 1024px;
 $yellow      : #fc0;
 $purple      : #93d;
@@ -272,7 +272,7 @@ top:.05em;
 
 
 .main_list {
-  width  : 54em;
+  width  : 50em;
   margin : .5em auto;
 }
 
@@ -309,22 +309,9 @@ top:.05em;
   font-size: 1.1em;
 }
 
-.social_item_icon {
-  position    : relative;
-  float       : right;
-  left: -10px;
-
-  width       : .75em;
-  padding     : .025em .015em .03em;
-
-  font-family : "Symbola", "Cocogoose", Helvetica, sans-serif;
-  font-size   : 10em;
-  line-height : 80%;
-}
-
 .social_item_text {
   font-family : "Quicksand_Book", "Cocogoose", Helvetica, sans-serif;
-  font-size   : 1.2em;
+  font-size   : 1.0em;
   line-height : 130%;
   text-align  : right;
 }
@@ -346,20 +333,43 @@ visibility: visible;
 
 }
 
+.item_icon {
+padding-bottom: 20px;
+}
+
 .social_item_content {
   @extend .item_content;
   float : left;
-  width: 38em;
+  padding-left: 8em;
+  width: 36em;
   display : block;
 }
 
 .techno_item_icon {
+@extend .item_icon;
   position    : relative;
   float       : left;
 
   width       : 14.6em;
-  padding     : 0em .15em 2em;
+  padding-left: .15em;
+  padding-right: .15em;
 }
+.social_item_icon {
+@extend .item_icon;
+  position    : relative;
+  float       : right;
+  left: -10px;
+
+  width       : .75em;
+  padding-top     : .04em;
+  padding-left     : .02em;
+  padding-right     : .02em;
+
+  font-family : "Symbola", "Cocogoose", Helvetica, sans-serif;
+  font-size   : 10em;
+  line-height : 80%;
+}
+
 
 .techno_item_text {
   position    : relative;
@@ -408,7 +418,7 @@ visibility: visible;
 .techno_item_content {
   @extend .item_content;
   float : right;
-  width : 32em;
+  width : 30em;
 }
 
 .mockup_outer_container {
@@ -566,8 +576,8 @@ float: left;
 
 #proficiency-list {
 font-size: 3em;
-width: 20em;
-//background-color: blue;
+/* width: 15em; */
+text-align: center;
 margin: 1em auto 3em;
 }
 
@@ -644,7 +654,7 @@ font-size: .8rem;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: .2rem;
+
 }
 .techno_item_content, .social_item_content {
   float: none;
@@ -666,6 +676,7 @@ position: relative;
 }
 .main_item {
 	   width: 80vw;
+	   height: 18rem;
 }
 .social_item_headline, .techno_item_headline, .app_store_button, .social_item_subtitle, .techno_item_subtitle, .social_item_text, .techno_item_text {
   float: none;
@@ -674,7 +685,9 @@ position: relative;
 		   text-align: center;
 		   display: block;
 		   position: relative;
-		   padding: 0;
+		   padding-top: 0;
+		   padding-left: 0;
+		   padding-right: 0;
 		   margin-top: .3rem;
 		   margin-left: auto;
 		   margin-right: auto;
@@ -695,6 +708,10 @@ float: none;
 		   padding-left: 0;
 		   padding-right: 0;
   width : 80vw;
+}
+
+#proficiency-list {
+font-size: 2em;
 }
 }
 

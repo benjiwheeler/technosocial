@@ -45,8 +45,8 @@ var openRight;
 	  imagePath : './js/',
 	  handleImagePath : 'https://dl.dropboxusercontent.com/u/1035381/ref/js/beforeafter/handle.gif',
 	  //				rtImagePath : 'https://dl.dropboxusercontent.com/u/1035381/ref/js/beforeafter/rt-small.png',
-	  rtImagePath: 'http://cdn.icons8.com/iOS7/PNG/25/Arrows/forward-25.png',
-	  ltImagePath: 'http://cdn.icons8.com/Android/PNG/24/Arrows/previous-24.png',
+//	  rtImagePath: 'http://cdn.icons8.com/iOS7/PNG/25/Arrows/forward-25.png',
+	//  ltImagePath: 'http://cdn.icons8.com/Android/PNG/24/Arrows/previous-24.png',
 	  //				ltImagePath : 'https://dl.dropboxusercontent.com/u/1035381/ref/js/beforeafter/lt-small.png',
 	  cursor: 'pointer',
 	  clickSpeed: 600,
@@ -124,8 +124,12 @@ var openRight;
 	aftContainerDiv.css({'position':'absolute','top':'0px','right':'0px'});
 	$('#draghandle'+randID).css({'z-index':'100','cursor':o.cursor,'position':'relative','top':dragHandleInitialTop,'left':'-'+dragHandleHalfWidth});
 
-	$(obj).append('<img src="'+o.ltImagePath + '" class="drag_arrow" id="lt-arrow'+randID+'"><img src="'+o.rtImagePath + '" class="drag_arrow" id="rt-arrow'+randID+'">');
-
+	if (o.ltImagePath !== undefined) {
+	  $(obj).append('<img src="'+o.ltImagePath + '" class="drag_arrow" id="lt-arrow'+randID+'">');
+}
+	if (o.rtImagePath !== undefined) {	
+  $(obj).append('<img src="'+o.rtImagePath + '" class="drag_arrow" id="rt-arrow'+randID+'">');
+}
 
 
 
