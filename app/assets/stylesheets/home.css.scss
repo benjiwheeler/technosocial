@@ -311,7 +311,7 @@ top:.05em;
 
 .social_item_text {
   font-family : "Quicksand_Book", "Cocogoose", Helvetica, sans-serif;
-  font-size   : 1.0em;
+  font-size   : 1.1em;
   line-height : 130%;
   text-align  : right;
 }
@@ -692,6 +692,9 @@ position: relative;
 		   margin-left: auto;
 		   margin-right: auto;
 		   margin-bottom: .5rem;
+}
+.social_item_text {
+  font-size   : 1.0em;
 }
 .app_store_button {
   height        : 1.6em;
