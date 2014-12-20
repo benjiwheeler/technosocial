@@ -13,7 +13,7 @@
     <h1 class="techno_before">TECHNO-</h1>
         <h1 class="social_before">Social</h1>
 
-    <div class="parallelogram_before parallelogram"><p class="parallelogram_text_before">The techie side of Ben Wheeler</p></div>
+    <div class="parallelogram_before parallelogram"><p class="parallelogram_text_before">Technology means not accepting the way it is</p></div>
 </div> <!-- header -->
 
 
@@ -48,7 +48,7 @@
           <a href="https://itunes.apple.com/us/app/dayo-daily-weather-on-your/id903458702?mt=8"><p class="techno_item_headline">Dayo</p></a>
           <a href="https://itunes.apple.com/us/app/dayo-daily-weather-on-your/id903458702?mt=8"><%= image_tag("app_store_button.png", class: :app_store_button) %></a>
           <p class="techno_item_subtitle">Daily weather on your lockscreen</p>
-          <p class="techno_item_text">Tells you the weather like a human does, by the time you wake up.<br />Tech I used: obj-c, js, Parse service</p>
+          <div class="techno_item_text"><p>Tells you the weather like a human does, by the time you wake up.</p><p>Tech I used: obj-c, js, Parse service</p></div>
           <div id="dayo_graph" class="graph"></div>
         </div>
     </li>
@@ -66,7 +66,7 @@
           <p class="techno_item_headline">Underground</p>
                     <%= image_tag("app_store_button.png", class: :app_store_button) %>
 <p class="techno_item_subtitle">Share thoughts with people like you</p>
-          <p class="techno_item_text">We failed at this before Facebook Rooms did!<br />Tech I used: obj-c, rails</p>
+          <div class="techno_item_text"><p>We failed at this before Facebook Rooms did!</p><p>Tech I used: obj-c, rails</p></div>
           <div id="underground_graph" class="graph"></div>
       </div>
     </li>
@@ -84,32 +84,35 @@
           <p class="techno_item_headline">eHighlighter</p>
                     <%= image_tag("app_store_button.png", class: :app_store_button) %>
 <p class="techno_item_subtitle">eBook-style highlighting for real-world books</p>
-          <p class="techno_item_text">A few thousand paying users love it!<br />Tech I used: obj-c</p>
+          <div class="techno_item_text"><p>A few thousand paying users love it!</p><p>Tech I used: obj-c</p></div>
           <div id="ehighlighter_graph" class="graph"></div>
       </div>
     </li>
 </ul>
 
 
-Key: one icon for each year of experience; color indicates how positive I feel about the language.
+    <div class="parallelogram_before parallelogram"><p class="parallelogram_text_before">Programming experience</p></div>
+
+<p class="explanation_before">Key: one icon for each year of experience;<br>color indicates how <span style="color: #efe;">positive</span> or <span style="color: #fee;">negative</span> I feel about the language.</p>
+
 <ul id="proficiency-before-list">
     <li class="proficiency-before-item" data-years="4" data-like=".5" data-mfizz="perl" data-name="perl">
     </li>
-    <li class="proficiency-before-item" data-years="2" data-like=".5" data-mfizz="objc" data-name="obj-c">
+    <li class="proficiency-before-item" data-years="2" data-like=".6" data-mfizz="objc" data-name="obj-c">
     </li>
-    <li class="proficiency-before-item" data-years="6" data-like=".7" data-mfizz="cplusplus" data-name="cplusplus">
+    <li class="proficiency-before-item" data-years="6" data-like=".8" data-mfizz="cplusplus" data-name="c++">
     </li>
-    <li class="proficiency-before-item" data-years="1" data-like="1" data-mfizz="ruby" data-name="ruby">
+    <li class="proficiency-before-item" data-years="1" data-like=".9" data-mfizz="ruby" data-name="ruby">
     </li>
     <li class="proficiency-before-item" data-years="1" data-like=".8" data-mfizz="ruby-on-rails" data-name="rails">
     </li>
     <li class="proficiency-before-item" data-years="1" data-like="1" data-mfizz="python" data-name="python">
     </li>
-    <li class="proficiency-before-item" data-years="1" data-like=".6" data-mfizz="javascript" data-name="javascript">
+    <li class="proficiency-before-item" data-years="1" data-like=".7" data-mfizz="javascript" data-name="js">
     </li>
-    <li class="proficiency-before-item" data-years="1" data-like=".4" data-mfizz="java-bold" data-name="java">
+    <li class="proficiency-before-item" data-years="1" data-like=".5" data-mfizz="java-bold" data-name="java">
     </li>
-    <li class="proficiency-before-item" data-years="8" data-like=".6" data-mfizz="html" data-name="html">
+    <li class="proficiency-before-item" data-years="8" data-like=".7" data-mfizz="html" data-name="html">
     </li>
     <li class="proficiency-before-item" data-years="2" data-like=".5" data-mfizz="php" data-name="php">
     </li>
@@ -127,14 +130,15 @@ Key: one icon for each year of experience; color indicates how positive I feel a
   <div id="inner-header-after">
 
 
-  <div id="headshot_circle_after" class="headshot_circle"drawn_selfie.png", id: :headshot_social, class: :headshot_img">
+  <div id="headshot_circle_after" class="headshot_circle">
+      <%= image_tag("drawn_selfie.png", id: :headshot_social, class: :headshot_img) %>
 
 
     </div>
     <h1 class="techno_after">TECHNO-</h1>
     <h1 class="social_after">Social</h1>
 
-    <div class="parallelogram_after parallelogram"><p class="parallelogram_text_after">Ben Wheeler connects to people</p></div>
+    <div class="parallelogram_after parallelogram"><p class="parallelogram_text_after">Life is meaningless without social context</p></div>
 </div> <!-- header -->
 
   <div id="contact-after">
@@ -190,9 +194,36 @@ helped Ken Thompson become Brooklyn's DA.</p>
     </ul>
 
 
+<!--
+    <div class="parallelogram_after parallelogram"><p class="parallelogram_text_after">Programming experience</p></div>
 
-    <ul id="proficiency-list-after">
+<p class="explanation_after">Key: one icon for each year of experience;<br>color indicates how <span style="color: #efe;">positive</span> or <span style="color: #fee;">negative</span> I feel about the language.</p>
+
+<ul id="proficiency-after-list">
+    <li class="proficiency-after-item" data-years="4" data-like=".5" data-mfizz="perl" data-name="perl">
+    </li>
+    <li class="proficiency-after-item" data-years="2" data-like=".6" data-mfizz="objc" data-name="obj-c">
+    </li>
+    <li class="proficiency-after-item" data-years="6" data-like=".8" data-mfizz="cplusplus" data-name="c++">
+    </li>
+    <li class="proficiency-after-item" data-years="1" data-like=".9" data-mfizz="ruby" data-name="ruby">
+    </li>
+    <li class="proficiency-after-item" data-years="1" data-like=".8" data-mfizz="ruby-on-rails" data-name="rails">
+    </li>
+    <li class="proficiency-after-item" data-years="1" data-like="1" data-mfizz="python" data-name="python">
+    </li>
+    <li class="proficiency-after-item" data-years="1" data-like=".7" data-mfizz="javascript" data-name="js">
+    </li>
+    <li class="proficiency-after-item" data-years="1" data-like=".5" data-mfizz="java-bold" data-name="java">
+    </li>
+    <li class="proficiency-after-item" data-years="8" data-like=".7" data-mfizz="html" data-name="html">
+    </li>
+    <li class="proficiency-after-item" data-years="2" data-like=".5" data-mfizz="php" data-name="php">
+    </li>
+    <li class="proficiency-after-item" data-years="3" data-like=".2" data-mfizz="css" data-name="css">
+    </li>
     </ul>
+-->
 
 
     </div> <!-- mainafter -->
