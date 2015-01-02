@@ -40,7 +40,7 @@ body {
   -moz-user-select: none;
   -khtml-user-select: none;
   -webkit-user-select: none;
-  -user-select: none;
+  user-select: none;
 }
 
 
@@ -175,19 +175,15 @@ top:.05em;
 }
 
 #mainbefore {
-//  min-height       : 100%;
   height     : 100%;
-//  height : 500vh;
   min-height : 250vh;
   width            : 100vw;
-//overflow: auto;
 
   background-color : black;
   text-align       : center;
 }
 
 #mainafter {
-//  min-height       : 100%;
   height     : 100%;
   min-height : 250vh;
   width            : 100%;
@@ -456,9 +452,9 @@ padding-bottom: 20px;
 }
 
 .screenshot {
-  position          : relative;
-  display           : block;
+  position          : absolute;
   top               : -0.34em;
+  left: .8em;
   bottom            : 0;
   z-index           : 2;
 
@@ -470,8 +466,15 @@ padding-bottom: 20px;
   text-align        : center;
 
   -webkit-clip-path : polygon(
-  0 25%, 100% 25%, 100% 70%, 0 70%, 0 25%
+  0 24.5%, 100% 24.5%, 100% 70%, 0 70%, 0 24.5%
   );
+
+/*     clip-path: inset(25% 100% 70% 0%);
+*/
+     clip: rect(49px, 160px, 139px, 0px);
+  /*   -webkit-clip-path: inset(25% 100% 70% 0%);
+  */
+
 }
 
 #dayo_screenshot {

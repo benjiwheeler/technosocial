@@ -18,6 +18,7 @@
 //= require jquery.csshelper
 //= require jquery.beforeafter
 //= require sprintf.min
+//= require prefixfree.min
 //= require_tree .
 
 
