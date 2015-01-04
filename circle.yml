@@ -9,6 +9,8 @@ machine:
 deployment:
   staging:
     branch: staging
+    heroku:
+      appname: technosocialstaging
     commands:
       - heroku maintenance:on --app technosocialstaging
       - heroku scale worker=0 --app technosocialstaging
@@ -19,6 +21,8 @@ deployment:
       - heroku maintenance:off --app technosocialstaging
   production:
     branch: production
+    heroku:
+      appname: technosocial
     commands:
       - heroku maintenance:on --app technosocial
       - heroku scale worker=0 --app technosocial
