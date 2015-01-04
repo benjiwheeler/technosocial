@@ -5,21 +5,6 @@ machine:
   environment:
     RAILS_ENV: "test"
     RACK_ENV: "test"
-    BING_ACCOUNT_KEY: "fSRaLCGmQL2frvHLn3Ip8DIAj+6N5+r0RsayplnVfmw="
-
-#database:
-#  pre:
-#    - bundle exec rake db:test:migrate
-#    - bundle exec rake db:schema:load
-
-dependencies:
-  # Compute the assets once and cache them
-  post:
-    - bundle exec rake assets:precompile assets:clean_expired:
-          environment:
-            RAILS_GROUPS: assets
-  cache_directories:
-    - "public/assets"
 
 deployment:
   staging:
