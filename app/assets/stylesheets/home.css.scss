@@ -352,6 +352,8 @@ padding-bottom: 20px;
   padding-left: .15em;
   padding-right: .15em;
 }
+
+
 .social_item_icon {
 @extend .item_icon;
   position    : relative;
@@ -487,6 +489,20 @@ padding-bottom: 20px;
 
 #ehighlighter_screenshot {
   background-image: asset-url("ehighlighter_screenshot.jpeg");
+}
+
+.techno_misc_icon {
+@extend .techno_item_icon;
+margin-left: .8em;
+margin-right: .8em;
+}
+
+#hrt_logo_icon {
+@extend .techno_misc_icon;
+  background-image: asset-url("hrtlogo_invert.png");
+  height: 116px;
+  width: 180px;
+
 }
 
 .app_store_button {
