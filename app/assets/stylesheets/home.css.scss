@@ -576,16 +576,15 @@ text-align: left;
 color: #fff !important;
 }
 
+
 .contact-icon {
 
-
 }
-
 .contact-before-icon {
-  @extend .contact-icon;
+  @extend .contact-icon !optional;
 }
 .contact-after-icon {
-  @extend .contact-icon;
+  @extend .contact-icon !optional;
   left: auto;
   right: -2em;
 }
