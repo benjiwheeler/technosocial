@@ -534,10 +534,12 @@ max-width: 40em;
 position: relative;
 }
 
+
+
 #contact-after, #contact-before {
 top: 0;
 position: absolute;
-height: 6em;
+
 font-size: 1.5em;
 width: 12em;
 }
@@ -548,29 +550,43 @@ right: 0;
 left: 0;
 }
 
-.contact-after-item, .contact-before-item {
-position: relative;
-margin: 0.3em;
+
+.contact-list {
+  margin-top: 1em;
+}
+#contact-before-list {
+@extend .contact-list;
+}
+#contact-after-list {
+@extend .contact-list;
 }
 
-.contact-after-item {
+.contact-item {
 position: relative;
-top: .1em;
+margin-bottom: 0.5em;
+}
+.contact-after-item {
+@extend .contact-item;
 text-align: right;
 color: #000 !important;
 }
 .contact-before-item {
+@extend .contact-item;
 text-align: left;
 color: #fff !important;
 }
 
-.contact-before-icon {
-}
 
+.contact-icon {
+
+}
+.contact-before-icon {
+  @extend .contact-icon !optional;
+}
 .contact-after-icon {
-top: 0;
-right: .8em;
-//background-color: blue;
+  @extend .contact-icon !optional;
+  left: auto;
+  right: -2em;
 }
 
 .contact-before-link, .contact-after-link {
@@ -584,14 +600,18 @@ color: #fff !important;
 color: #000 !important;
 }
 .contact-after-text, .contact-before-text {
+position: relative;
 top: .1em;
+padding-bottom: 1em;
 line-height: 110%;
 width: 10em;
 }
 .contact-before-text {
 }
 .contact-after-text {
+/*
 float: left;
+*/
 //background-color: red;
 
 }
