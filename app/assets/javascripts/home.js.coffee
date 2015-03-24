@@ -10,16 +10,16 @@ String.prototype.format = ->
     return if typeof args[number] isnt 'undefined' then args[number] else match
 
 
-color_from_hotness = (hotness = .5) ->
+color_from_goodness = (goodness = .5) ->
   # turn temperature into separate color values for
   # red, green, and blue. idea is when temperature is
   # 0, color is light blue. when temperature is 1.0,
   # color is bright red.
-  redness = Math.floor(Math.min(120 + 200 * hotness, 255));
-  greenness = Math.floor(255 - 190 * hotness);
-  blueness = Math.floor(255 - 220 * hotness);
+  redness = Math.floor(Math.min(275 - 150 * goodness, 200));
+  greenness = Math.floor(105 + 150 * goodness);
+  blueness = Math.floor(50 + 130 * goodness);
   color = sprintf("#%02X%02X%02X", redness, greenness, blueness);
-  #alert(" hotness: " + hotness + " color: " + color);
+  #alert(" goodness: " + goodness + " color: " + color);
   color
 
 
@@ -46,7 +46,7 @@ $ ->
     [1..num_years].forEach ->
       prof_item_el.append('<i class="icon-' + icon_code + '"></i>')
     prof_item_el.append('<span class="proficiency-before-name">(' + lang_name + ')</span>')
-    prof_item_el.css({'color': color_from_hotness(1.0 - like_amount)})
+    prof_item_el.css({'color': color_from_goodness(like_amount)})
 
 
 
