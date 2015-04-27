@@ -147,12 +147,24 @@ var dragHandleInitialTop = '45vh';
 
 
 	openLeft = function(){
-		befContainerDiv.animate({width:leftOpenWidth},o.linkDisplaySpeed);
-		$('#dragwrapper'+randID).animate({left: leftOpenWidth},o.linkDisplaySpeed);
+	  var halfWidth = parseFloat(dragWrapperHalfWidth);
+	  var newWidth = leftOpenWidth + halfWidth;
+		befContainerDiv.animate({width:newWidth},o.linkDisplaySpeed,"swing", function() {
+
+});
+		$('#dragwrapper'+randID).animate({left: leftOpenWidth},o.linkDisplaySpeed, "swing", function() {
+
+});
 	};
 	openRight = function(){
-		befContainerDiv.animate({width:leftClosedWidth},o.linkDisplaySpeed);
-		$('#dragwrapper'+randID).animate({left: leftClosedWidth},o.linkDisplaySpeed);
+	  var halfWidth = parseFloat(dragWrapperHalfWidth);
+	  var newWidth = leftClosedWidth + halfWidth;
+		befContainerDiv.animate({width:newWidth},o.linkDisplaySpeed, "swing", function() {
+
+});
+		$('#dragwrapper'+randID).animate({left: leftClosedWidth},o.linkDisplaySpeed, "swing", function() {
+
+});
 	};
 
 	/*
