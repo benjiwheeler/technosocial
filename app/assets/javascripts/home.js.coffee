@@ -41,10 +41,14 @@ $ ->
     prof_item_el = $(this)
     num_years = parseInt(prof_item_el.data('years'))
     like_amount = prof_item_el.data('like')
-    icon_code = prof_item_el.data('mfizz')
+    mfizz_icon_code = prof_item_el.data('mfizz')
+    fa_icon_code = prof_item_el.data('fa')
     lang_name = prof_item_el.data('name')
     [1..num_years].forEach ->
-      prof_item_el.append('<i class="icon-' + icon_code + '"></i>')
+      if mfizz_icon_code?
+        prof_item_el.append('<i class="icon-' + mfizz_icon_code + '"></i>')
+      else if fa_icon_code?
+        prof_item_el.append('<i class="fa fa-' + fa_icon_code + '"></i>')
     prof_item_el.append('<span class="proficiency-before-name">(' + lang_name + ')</span>')
     prof_item_el.css({'color': color_from_goodness(like_amount)})
 

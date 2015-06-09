@@ -63,7 +63,7 @@ var getStyleRuleValue = function(style, selector, sheetparam) {
 	  linkDisplaySpeed: 200,
 	  dividerColor: '#888',
 	  enableKeyboard: true,
-	  keypressAmount: 20,
+	  keypressAmount: 30,
 	  onReady: function(){}
 	};
 	var options = $.extend(defaults, options);
