@@ -124,6 +124,14 @@ color: white;
 color: black;
 }
 
+
+.text_before {
+    font-family : "VivaPersib", "Cocogoose", Helvetica, sans-serif;
+}
+.text_after {
+    font-family : "mathilde", "Cocogoose", Helvetica, sans-serif;
+}
+
 .parallelogram_text {
     position: relative;
   font-size         : 1.5em;
@@ -149,14 +157,6 @@ color: black;
   @extend .parallelogram_text;
   @extend .text_before;
     top: 2px;
-}
-
-.text_before {
-    font-family : "VivaPersib", "Cocogoose", Helvetica, sans-serif;
-}
-.text_after {
-    font-family : "mathilde", "Cocogoose", Helvetica, sans-serif;
-
 }
 
 .parallelogram_text_after {
@@ -296,6 +296,15 @@ top:.05em;
   margin   : 4rem 0 8rem;
   font-size: 1rem;
 }
+
+.techno_text {
+@extend .text_before;
+font-size: 1.3em;
+margin: 0 auto;
+padding-left: 3em;
+padding-right: 3em;
+}
+
 
 .social_text {
   font-family : "Quicksand_Book", "Cocogoose", Helvetica, sans-serif;
@@ -622,7 +631,7 @@ float: left;
 
 .item_list {
 text-align: center;
-margin: 1em auto 3em;	   
+margin: 1em auto 3em;
 }
 
 #proficiency-list {
@@ -639,6 +648,16 @@ font-size: 3em;
 //background-color: yellow;
   @extend .text_before;
 
+}
+
+
+#hiring-before-list {
+@extend .item_list;
+  font-size   : 1.1em;
+}
+
+.hiring-before-item {
+@extend .techno_text;
 }
 
 #byme-after-list {
