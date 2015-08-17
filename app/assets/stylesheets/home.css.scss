@@ -734,11 +734,21 @@ font-size: .8rem;
   display: block;
   margin-left: auto;
   margin-right: auto;
+
+         text-align: center;
+// Setting these zero seems to the text hide behind the main vertical divider
+//       padding-left: 0;
+  //     padding-right: 0;
+  width : 80vw;
 }
 .main_list {
 	   width: 85vw;
 	   font-size: .8em;
 }
+.item_list {
+  margin: 1em 15vw 3em;
+}
+
 #social_list {
 position: relative;
 left: 5vw;
@@ -778,14 +788,6 @@ position: relative;
 .social_item_icon {
 margin-bottom: 1rem;
 float: none;
-}
-.social_item_content, .techno_item_content {
-		   text-align: center;
-		   margin-left: auto;
-		   margin-right: auto;
-		   padding-left: 0;
-		   padding-right: 0;
-  width : 80vw;
 }
 
 #proficiency-list {
