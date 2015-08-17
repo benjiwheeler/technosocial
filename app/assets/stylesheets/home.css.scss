@@ -342,6 +342,7 @@ padding-right: 3em;
 .item_content {
 //  padding-bottom: 2em;
 visibility: visible;
+  margin-bottom: 4rem;
 
 }
 
@@ -355,6 +356,7 @@ padding-bottom: 20px;
   padding-left: 2em;
   width: 38em;
   display : block;
+
 }
 
 .techno_item_icon {
@@ -726,7 +728,9 @@ font-size: .8rem;
 
 }
 .techno_item_content, .social_item_content {
-  float: none;
+// made list items overlap; note however that without this, the two sides are not aligned vertically
+//  float: none;
+
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -745,7 +749,9 @@ position: relative;
 }
 .main_item {
 	   width: 80vw;
-	   height: 18rem;
+//	   height: 18rem;
+//overflow: hidden;
+
 }
 .social_item_headline, .techno_item_headline, .app_store_button, .social_item_subtitle, .techno_item_subtitle, .social_item_text, .techno_item_text {
   float: none;
