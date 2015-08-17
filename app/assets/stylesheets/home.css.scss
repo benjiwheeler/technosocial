@@ -744,6 +744,9 @@ font-size: .8rem;
 .main_list {
 	   width: 85vw;
 	   font-size: .8em;
+// without this, the next parallelogram doesn't align right
+     overflow: hidden;
+
 }
 .item_list {
   margin: 1em 15vw 3em;
