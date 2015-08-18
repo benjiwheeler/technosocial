@@ -105,9 +105,11 @@ h1.social_after {
    font-size: .8em;
 }
 
+
+
 .explanation {
 font-size: 1.3em;
-margin: 0 auto;
+margin: 4rem auto;
 padding-left: 3em;
 padding-right: 3em;
 }
@@ -302,15 +304,17 @@ top:.05em;
 .techno_text {
 @extend .text_before;
 font-size: 1.3em;
-margin: 0 auto;
+margin: 2rem auto;
 padding-left: 3em;
 padding-right: 3em;
+color: white;
 }
 
 
 .social_text {
   font-family : "Quicksand_Book", "Cocogoose", Helvetica, sans-serif;
   line-height : 150%;
+  margin-bottom: .5rem;
 }
 
 .social_item {
@@ -378,7 +382,7 @@ padding-bottom: 20px;
   float       : right;
   left: -10px;
 
-  width       : .75em;
+  width       : .9em;
   padding-top     : .04em;
   padding-left     : .02em;
   padding-right     : .02em;
@@ -791,6 +795,8 @@ position: relative;
 .social_item_icon {
 margin-bottom: 1rem;
 float: none;
+// needed in order to make icons stick out enough to be seen when screen is split
+padding-left: 1rem;
 }
 
 #proficiency-list {
