@@ -194,6 +194,11 @@ top:.05em;
   text-align       : center;
 }
 
+/* Lighter links on dark background */
+div#mainbefore a {
+   color: #52aef8
+}
+
 #headshot_circle_before {
   background-color : white;
 }
