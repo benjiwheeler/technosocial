@@ -659,21 +659,21 @@ font-size: 3em;
 }
 
 
-#hiring-before-list {
+#before-text-list {
 @extend .item_list;
   font-size   : 1.1em;
 }
 
-.hiring-before-item {
+.before-text-item {
 @extend .techno_text;
 }
 
-#byme-after-list {
+#after-text-list {
 @extend .item_list;
   font-size   : 1.1em;
 }
 
-.byme-after-item {
+.after-text-item {
   @extend .social_text;
 }
 
