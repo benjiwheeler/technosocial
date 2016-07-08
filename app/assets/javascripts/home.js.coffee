@@ -10,7 +10,14 @@ String.prototype.format = ->
     return if typeof args[number] isnt 'undefined' then args[number] else match
 
 
+goodness_colors = ["#DD3F3F", "#E87341", "#EE8E43", "#F9C245", "#FFDC46", "#F3E637", "#E7EF27", "#B2F559", "#7DFA8B", "#68FF97"]
 color_from_goodness = (goodness = .5) ->
+  # 0 to 9
+  goodness = goodness * 10 - 1
+  goodness_colors[goodness]
+
+# DEPRECATED :( too muddy
+algorithmic_color_from_goodness = (goodness = .5) ->
   # turn temperature into separate color values for
   # red, green, and blue. idea is when temperature is
   # 0, color is light blue. when temperature is 1.0,
@@ -30,8 +37,8 @@ $ ->
   list_items.sort (a,b) ->
     an = parseInt(a.getAttribute('data-years'))
     bn = parseInt(b.getAttribute('data-years'))
-    return -1 if an > bn 
-    return 1 if an < bn 
+    return -1 if an > bn
+    return 1 if an < bn
     return 0
 
   list_items.detach()
