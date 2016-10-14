@@ -81,4 +81,9 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  #  added per Devise instructions
+  config.action_mailer.default_url_options = { host: 'prioritizershake.herokuapp.com' }
+  # so you can assert
+  SolidAssert.enable_assertions
 end
