@@ -161,7 +161,7 @@ color: black;
     top: 2px;
 }
 
-.parallelogram_text_before p {
+.before-text-item p {
    padding-top: .5em;
    font-size: .9em;
 
@@ -512,6 +512,10 @@ padding-bottom: 20px;
 
 }
 
+#luigi {
+  background-image: asset-url("luigi_tiny.png");
+}
+
 #dayo_screenshot {
   background-image: asset-url("dayo_screenshot.jpeg");
 }
@@ -537,6 +541,16 @@ margin-right: .8em;
   width: 180px;
 
 }
+
+#luigi_tiny {
+@extend .techno_misc_icon;
+  background-image: asset-url("luigi_tiny.png");
+  height: 140px;
+  width: 140px;
+  background-size: 140px;
+  left: 30px;
+}
+
 
 .app_store_button {
   float         : left;
