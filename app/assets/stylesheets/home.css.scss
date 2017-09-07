@@ -177,14 +177,14 @@ top:.05em;
 
 #beforeafter {
   height     : 100%; /* seems not to matter */
-  min-height : 250em; /* crucial -- this is how far down actual before content goes */
+  min-height : 300em; /* crucial -- this is how far down actual before content goes */
   width: 100%;
   min-width      : 100vw;
 }
 
 #mainbefore {
   height     : 100%;
-  min-height : 250em;
+  min-height : 300em;
   width            : 100vw;
 
   background-color : black;
