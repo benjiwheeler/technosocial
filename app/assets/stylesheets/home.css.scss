@@ -534,6 +534,14 @@ margin-left: .8em;
 margin-right: .8em;
 }
 
+#scratch_logo_icon {
+@extend .techno_misc_icon;
+  background-image: asset-url("cat_black_bg.svg");
+  height: 116px;
+  width: 180px;
+
+}
+
 #hrt_logo_icon {
 @extend .techno_misc_icon;
   background-image: asset-url("hrtlogo_invert.png");
