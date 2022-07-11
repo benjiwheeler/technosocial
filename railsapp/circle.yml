@@ -1,0 +1,30 @@
+general:
+  build_dir: .
+
+machine:
+  environment:
+    RAILS_ENV: "test"
+    RACK_ENV: "test"
+
+# note: DON'T need to have heroku: section anywhere because we use --app heroku commands.
+
+deployment:
+  staging:
+    branch: staging
+    commands:
+      - heroku maintenance:on --app technosocialstaging
+      - git push git@heroku.com:technosocialstaging.git $CIRCLE_SHA1:refs/heads/master
+      - heroku run rake assets:precompile --app technosocialstaging
+      - heroku run rake db:migrate --app technosocialstaging
+      - heroku scale worker=0 --app technosocialstaging
+      - heroku maintenance:off --app technosocialstaging
+  production:
+    branch: production
+    commands:
+      - heroku maintenance:on --app technosocial
+      - git push git@heroku.com:technosocial.git $CIRCLE_SHA1:refs/heads/master
+      - heroku run rake assets:precompile --app technosocial
+      - heroku run rake db:migrate --app technosocial
+      - heroku scale worker=0 --app technosocial
+      - heroku maintenance:off --app technosocial
+
