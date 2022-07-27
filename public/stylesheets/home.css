@@ -1,0 +1,875 @@
+
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: 700px) { @content; }
+  }
+
+  @else if $media == medium-screens {
+    @media only screen and (min-width: 700px + 1) and (max-width: 1024px - 1) { @content; }
+  }
+
+  @else if $media == wide-screens {
+    @media only screen and (min-width: 1024px) { @content; }
+  }
+}
+
+html {
+    font-size        : 13px;
+
+}
+
+body {
+  top              : 0;
+
+  background-color : #fff;
+  font-family      : verdana, arial, helvetica, sans-serif;
+  color            : #333;
+  line-height      : 125%;
+  text-align       : center;
+}
+
+.noselect {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+
+h1 {
+  position    : relative;
+  background-color: none;
+
+  font-family : Verdana, Helvetica, sans-serif;
+  line-height : 110%;
+}
+
+h1.techno_before {
+  //left        : .2em;
+
+  font-family : "DigitalDisorder", Cocogoose, Verdana, Helvetica, sans-serif;
+  color       : #fc0;
+  z-index: 1;
+}
+
+h1.social_before {
+  //left        : .2em;
+
+  font-family : "go around the books", Cocogoose, Verdana, Helvetica, sans-serif;
+  color       : #444;
+  z-index: 2;
+}
+
+h1.techno_after {
+  //left        : .2em;
+
+  font-family : "DigitalDisorder", Cocogoose, Verdana, Helvetica, sans-serif;
+  color       : #ccc;
+  z-index: 1;
+}
+
+h1.social_after {
+  //left        : .2em;
+  z-index: 2;
+
+  font-family : "go around the books", Cocogoose, Verdana, Helvetica, sans-serif;
+  color       : #93d;
+}
+
+.parallelogram {
+  position          : relative;
+  /* only as wide as content */
+  display           : inline-block;
+
+  height            : 3em;
+  margin            : 2em auto;
+  padding           : 1em 2em 2.5em;
+
+  font-family       : "BebasNeue", "Cocogoose", Cocogoose, Verdana, Helvetica, sans-serif;
+  border-radius     : .5em;
+
+  -webkit-transform : skew(-30deg);
+  -moz-transform    : skew(-30deg);
+  transform         : skew(-30deg);
+}
+
+.small {
+   font-size: .8em;
+}
+
+
+
+.explanation {
+font-size: 1.3em;
+margin: 0 auto;
+padding-left: 3em;
+padding-right: 3em;
+}
+
+.explanation_before {
+@extend .explanation;
+  @extend .text_before;
+color: white;
+}
+
+.explanation_after {
+@extend .explanation;
+  @extend .text_after;
+color: black;
+}
+
+
+.text_before {
+    font-family : "VivaPersib", "Cocogoose", Helvetica, sans-serif;
+}
+.text_after {
+    font-family : "mathilde", "Cocogoose", Helvetica, sans-serif;
+}
+
+.parallelogram_text {
+    position: relative;
+  font-size         : 1.5em;
+  font-weight       : 200;
+
+  -webkit-transform : skew(20deg);
+  -moz-transform    : skew(20deg);
+  transform         : none;
+  transform         : skew(20deg);
+}
+
+.parallelogram_before {
+  background : #fff;
+  color      : #000;
+}
+
+.parallelogram_after {
+  background : #000;
+  color      : #fff;
+}
+
+.parallelogram_text_before {
+  @extend .parallelogram_text;
+  @extend .text_before;
+    top: 2px;
+}
+
+.before-text-item p {
+   padding-top: .5em;
+   font-size: .9em;
+
+}
+
+.parallelogram_text_after {
+  @extend .parallelogram_text;
+  @extend .text_after;
+top:.05em;
+    font-size: 3em;
+
+}
+
+#beforeafter {
+  height     : 100%; /* seems not to matter */
+  min-height : 300em; /* crucial -- this is how far down actual before content goes */
+  width: 100%;
+  min-width      : 100vw;
+}
+
+#mainbefore {
+  height     : 100%;
+  min-height : 300em;
+  width            : 100vw;
+
+  background-color : black;
+  text-align       : center;
+}
+
+#mainafter {
+  height     : 100%;
+  min-height : 300em;
+  width            : 100%;
+
+  background-color : white;
+  text-align       : center;
+}
+
+/* Lighter links on dark background */
+div#mainbefore a {
+   color: #52aef8
+}
+
+#headshot_circle_before {
+  background-color : white;
+}
+
+#headshot_circle_after {
+  background-color : black;
+}
+
+.headshot_circle {
+  position      : relative;
+  top           : 1em;
+  left          : .3em;
+
+  height        : 16em;
+  width         : 16em;
+  margin        : 0em auto;
+  margin-bottom : .3em;
+
+  border-radius : 50%;
+}
+
+.headshot_img {
+  position : relative;
+  height : 13em;
+}
+
+#headshot_techno {
+  top    : 1.5em;
+  left   : .8em;
+  height : 13em;
+}
+
+#headshot_social {
+  top    : 1.8em;
+  left   : .5em;
+  height : 13em;
+}
+
+.drag_wrapper {
+  width : 4em;
+}
+
+.drag_handle {
+  position              : fixed;
+
+  height                : 4em;
+  width                 : 1em;
+
+  background            : rgba(155,155, 155, 0.5);
+
+  /* from jquery finger readme */
+  user-drag             : none;
+  -webkit-user-drag     : none ;
+  /* from stackoverflow, could be wrong */
+  -webkit-touch-callout : none;
+  -webkit-user-select   : none;
+}
+
+#central_outer_container {
+  position   : relative;
+
+  margin     : 0;
+
+  text-align : center;
+}
+
+#central_container {
+  position         : relative;
+  display          : block;
+
+  height           : auto;
+  margin           : 0 auto;
+
+  background-color : #169;
+}
+
+
+.main_list {
+  width  : 50em;
+  margin : .1em auto;
+// without this, the next parallelogram doesn't align right
+     overflow: hidden;
+}
+
+#social_list {
+  @extend .main_list;
+}
+
+#techno_list {
+  @extend .main_list;
+    font-family : "DOTMBold", Helvetica, sans-serif;
+
+}
+
+.main_item {
+  position : relative;
+  display  : block;
+  clear    : both;
+
+  height   : 10rem;
+  width    : 100%;
+//  padding-bottom: 5em;
+/* significant: */
+  margin   : 4rem 0 8rem;
+  font-size: 1rem;
+}
+
+.techno_text {
+@extend .text_before;
+font-size: 1.3em;
+margin: 2rem auto;
+padding-left: 3em;
+padding-right: 3em;
+color: white;
+}
+
+
+.social_text {
+  font-family : "Quicksand_Book", "Cocogoose", Helvetica, sans-serif;
+  line-height : 150%;
+  margin-bottom: .5rem;
+}
+
+.social_item {
+  @extend .main_item;
+  font-size: 1em;
+}
+
+.techno_item {
+  @extend .main_item;
+  color : #fff;
+  font-size: 1.1em;
+}
+
+.social_item_text {
+  @extend .social_text;
+  font-size   : 1.1em;
+  text-align  : right;
+}
+
+.social_item_headline {
+  display     : block;
+
+  padding-top: .3em;
+  margin      : 0em auto .6em;
+
+  font-family : "Littledays", "go around the books", "Cocogoose", Helvetica, sans-serif;
+  font-size   : 2.5em;
+  text-align  : right;
+}
+
+.item_content {
+//  padding-bottom: 2em;
+visibility: visible;
+  margin-bottom: 4rem;
+
+}
+
+.item_icon {
+padding-bottom: 20px;
+}
+
+.social_item_content {
+  @extend .item_content;
+  float : left;
+  padding-left: 2em;
+  width: 38em;
+  display : block;
+
+}
+
+.techno_item_icon {
+@extend .item_icon;
+  position    : relative;
+  float       : left;
+
+  width       : 14.6em;
+  padding-left: .15em;
+  padding-right: .15em;
+}
+
+
+.social_item_icon {
+@extend .item_icon;
+  position    : relative;
+  float       : right;
+  left: -10px;
+
+  width       : .9em;
+  padding-top     : .04em;
+  padding-left     : .02em;
+  padding-right     : .02em;
+
+  font-family : "EmojiSymbols", "OpenSansEmoji", "Symbola", "Cocogoose", Helvetica, sans-serif;
+  font-size   : 10em;
+  line-height : 80%;
+}
+
+
+.techno_item_text {
+  position    : relative;
+  display     : block;
+  float       : left;
+  clear       : both;
+  left        : 0;
+
+  font-size   : 0.9em;
+  line-height : 130%;
+  text-align  : left;
+}
+.techno_item_text p {
+   margin-top: .2em;
+   margin-bottom: .4em;
+}
+
+.techno_item_subtitle {
+  position    : relative;
+  display       : block;
+  float         : left;
+  left          : 0;
+  clear: both;
+
+  margin-bottom : .6em;
+
+  font-size   : 1.2em;
+  font-style    : italic;
+  line-height   : 110%;
+  text-align    : left;
+}
+
+.techno_item_headline {
+  float         : left;
+  left          : 0;
+
+  margin-right  : auto;
+  margin-bottom : .6em;
+  margin-left   : 0;
+
+  font-size     : 2em;
+  line-height   : 100%;
+  text-align    : left;
+}
+
+.techno_item_content {
+  @extend .item_content;
+  float : right;
+  width : 30em;
+}
+
+.mockup_outer_container {
+  position      : relative;
+
+  height        : 9.375em;
+  width         : 14.375em;
+
+  text-align    : center;
+  border-bottom : .1em solid green;
+  z-index                      : 1;
+}
+
+.mockup_inner_container {
+  position : relative;
+
+  height   : 9.375em;
+  width    : 12.5em;
+  margin   : 0 auto;
+}
+
+.mockup_background {
+  position                     : absolute;
+  z-index                      : 0;
+
+  height                       : 9.375em;
+  width                        : 12.5em;
+
+  background-repeat            : no-repeat;
+  background-size              : 12.5em;
+
+  background-image: asset-url("iphone6_wireframe_purple.png");
+}
+
+.screenshot {
+  position          : absolute;
+  top               : -0.34em;
+  left: .8em;
+  bottom            : 0;
+  z-index           : 2;
+
+  height            : 13.875em;
+  width:         10.875em;
+  margin            : 0 auto;
+
+  background-size   : cover;
+  text-align        : center;
+
+  -webkit-clip-path : polygon(
+  0 24.5%, 100% 24.5%, 100% 70%, 0 70%, 0 24.5%
+  );
+
+/*     clip-path: inset(25% 100% 70% 0%);
+*/
+     clip: rect(49px, 160px, 139px, 0px);
+  /*   -webkit-clip-path: inset(25% 100% 70% 0%);
+  */
+
+}
+
+#luigi {
+  background-image: asset-url("luigi_tiny.png");
+}
+
+#dayo_screenshot {
+  background-image: asset-url("dayo_screenshot.jpeg");
+}
+
+#underground_screenshot {
+  background-image: asset-url("underground_screenshot.jpeg");
+}
+
+#ehighlighter_screenshot {
+  background-image: asset-url("ehighlighter_screenshot.jpeg");
+}
+
+.techno_misc_icon {
+@extend .techno_item_icon;
+margin-left: .8em;
+margin-right: .8em;
+}
+
+#scratch_logo_icon {
+@extend .techno_misc_icon;
+  background-image: asset-url("cat_black_bg.svg");
+  height: 116px;
+  width: 180px;
+
+}
+
+#hrt_logo_icon {
+@extend .techno_misc_icon;
+  background-image: asset-url("hrtlogo_invert.png");
+  height: 116px;
+  width: 180px;
+
+}
+
+#luigi_tiny {
+@extend .techno_misc_icon;
+  background-image: asset-url("luigi_tiny.png");
+  height: 140px;
+  width: 140px;
+  background-size: 140px;
+  left: 30px;
+}
+
+
+.app_store_button {
+  float         : left;
+  left          : 0;
+
+  height        : 1.6em;
+  padding: .2em 1em 0em 1em;
+
+  text-align    : left;
+}
+
+.graph {
+       visibility: hidden;
+display: none;
+min-width: 310px; max-width: 350px; height: 30px; margin: 0 auto
+}
+
+
+#outer-header-after, #outer-header-before {
+margin: 0 auto;
+max-width: 70em;
+position: relative;
+}
+#inner-header-after, #inner-header-before {
+margin: 0 auto;
+max-width: 40em;
+position: relative;
+}
+
+
+
+#contact-after, #contact-before {
+top: 0;
+position: absolute;
+
+font-size: 1.5em;
+width: 12em;
+}
+#contact-after {
+right: 0;
+}
+#contact-before {
+left: 0;
+}
+
+
+.contact-list {
+  margin-top: 1em;
+}
+#contact-before-list {
+@extend .contact-list;
+}
+#contact-after-list {
+@extend .contact-list;
+}
+
+.contact-item {
+position: relative;
+margin-bottom: 0.5em;
+}
+.contact-after-item {
+@extend .contact-item;
+text-align: right;
+color: #000 !important;
+}
+.contact-before-item {
+@extend .contact-item;
+text-align: left;
+color: #fff !important;
+}
+
+
+.contact-icon {
+
+}
+.contact-before-icon {
+  @extend .contact-icon !optional;
+}
+.contact-after-icon {
+  @extend .contact-icon !optional;
+  left: auto;
+  right: -2em;
+}
+
+.contact-before-link, .contact-after-link {
+text-decoration: none;
+font-weight: 400 !important;
+}
+.contact-before-link {
+color: #fff !important;
+}
+.contact-after-link {
+color: #000 !important;
+}
+.contact-after-text, .contact-before-text {
+position: relative;
+top: .1em;
+padding-bottom: 1em;
+line-height: 110%;
+width: 10em;
+}
+.contact-before-text {
+}
+.contact-after-text {
+/*
+float: left;
+*/
+//background-color: red;
+
+}
+
+.item_list {
+text-align: center;
+margin: 1em auto 3em;
+}
+
+#proficiency-list {
+@extend .item_list;
+font-size: 3em;
+/* width: 15em; */
+}
+
+#proficiency-before-list {
+@extend #proficiency-list;
+}
+
+.proficiency-before-item {
+  @extend .text_before;
+
+}
+
+
+#before-text-list {
+@extend .item_list;
+  font-size   : 1.1em;
+}
+
+.before-text-item {
+@extend .techno_text;
+}
+
+#after-text-list {
+@extend .item_list;
+  font-size   : 1.1em;
+}
+
+.after-text-item {
+  @extend .social_text;
+}
+
+.proficiency-name {
+margin-left: .5em;
+color: #999;
+font-size: .6em;
+top: -.1em;
+position: relative;
+}
+.proficiency-before-name
+{
+@extend .proficiency-name;
+}
+
+/* ************************** different sizes ***************************** */
+
+
+@include respond-to(handhelds) {
+  body {
+    min-width : 320px; // hack for mobile safari
+    // need these or zindex fonts fail sometimes!
+    -webkit-transform     : scale(1.0);
+    -moz-transform        : scale(1.0);
+    -moz-transform-origin : 50% 0;
+
+    zoom                  : 1.0;
+    font-size: 13px;
+}
+html {
+    font-size: 13px;
+  }
+h1 {
+   font-size: 3.5em;
+}
+#contact-before, #contact-after {
+display: block;
+float: none;
+left: auto;
+right: auto;
+margin: 2em auto;
+top: 0;
+padding-top: 0;
+clear: both;
+position: relative;
+}
+.headshot_circle {
+font-size: .8rem;
+}
+.parallelogram {
+  font-size: .9rem;
+}
+.techno_item_icon, .social_item_icon {
+  float: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.techno_item_content, .social_item_content {
+// made list items overlap; note however that without this, the two sides are not aligned vertically
+//  float: none;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+         text-align: center;
+// Setting these zero seems to the text hide behind the main vertical divider
+//       padding-left: 0;
+  //     padding-right: 0;
+  width : 80vw;
+}
+.main_list {
+	   width: 85vw;
+	   font-size: .8em;
+
+}
+.item_list {
+  margin: 1em 15vw 3em;
+}
+
+#social_list {
+position: relative;
+left: 5vw;
+}
+#techno_list {
+position: relative;
+//left: -5vw;
+}
+.main_item {
+	   width: 80vw;
+//	   height: 18rem;
+//overflow: hidden;
+
+}
+.social_item_headline, .techno_item_headline, .app_store_button, .social_item_subtitle, .techno_item_subtitle, .social_item_text, .techno_item_text {
+  float: none;
+}
+.social_item_icon, .techno_item_icon, .social_item_headline, .techno_item_headline, .app_store_button, .social_item_subtitle, .techno_item_subtitle, .social_item_text, .techno_item_text {
+		   text-align: center;
+		   display: block;
+		   position: relative;
+		   padding-top: 0;
+		   padding-left: 0;
+		   padding-right: 0;
+		   margin-top: .3rem;
+		   margin-left: auto;
+		   margin-right: auto;
+		   margin-bottom: .5rem;
+}
+.social_item_text {
+  font-size   : 1.0em;
+}
+.app_store_button {
+  height        : 1.6em;
+}
+/* confusing to me that this is necessary; why doesn't it obey decent size of margin bottom it has already? */
+.social_item_icon {
+margin-bottom: 1rem;
+float: none;
+// needed in order to make icons stick out enough to be seen when screen is split
+padding-left: 1rem;
+}
+
+#proficiency-list {
+font-size: 2em;
+}
+}
+
+@include respond-to(medium-screens) {
+  body {
+    -webkit-transform     : scale(1.0);
+    -moz-transform        : scale(1.0);
+    -moz-transform-origin : 50% 0;
+
+    zoom                  : 1.0;
+    font-size: 13px;
+
+}
+html {
+    font-size: 13px;
+  }
+h1 {
+   font-size: 6em;
+}
+.headshot_circle {
+		font-size: 1em;
+}
+}
+
+@include respond-to(wide-screens) {
+  body {
+    -webkit-transform     : scale(1.0);
+    -moz-transform        : scale(1.0);
+    -moz-transform-origin : 50% 0;
+
+    zoom                  : 1.0;
+    font-size: 13px;
+
+}
+html {
+    font-size: 13px;
+  }
+h1 {
+   font-size: 6em;
+}
+.headshot_circle {
+		font-size: 1.2em;
+}
+}
