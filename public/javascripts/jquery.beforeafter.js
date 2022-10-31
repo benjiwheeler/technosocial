@@ -1,5 +1,7 @@
 //= require jquery.csshelper
 
+//alert("got here!");
+
 var openLeft;
 var openRight;
 //alert("using csshelper, it is:" + csshelper);
